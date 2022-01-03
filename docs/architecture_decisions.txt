@@ -1,0 +1,5 @@
+1. gRPC is fast, so we will use it with Location Service to kafka as there is a lot of data being
+transported from database to location service.
+2. Kafka will receive data from location service, and send it to consumer. It will consume data and
+send it to the database.
+3. REST will interact with the Front End Application from Connection Service and Person Service.
