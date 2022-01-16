@@ -1,7 +1,5 @@
 from models import Location
-from schemas import (
-    LocationSchema
-)
+from schemas import LocationSchema
 from services import LocationService
 from flask import request
 from flask_accepts import accepts, responds
