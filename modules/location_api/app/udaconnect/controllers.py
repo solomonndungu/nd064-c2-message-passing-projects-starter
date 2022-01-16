@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from models import Location
 from schemas import (
     LocationSchema
