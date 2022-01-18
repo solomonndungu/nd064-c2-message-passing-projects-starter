@@ -1,6 +1,6 @@
 from models import Location
 from schemas import LocationSchema
-from services import LocationService
+from location_service import LocationService
 from flask import request
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource

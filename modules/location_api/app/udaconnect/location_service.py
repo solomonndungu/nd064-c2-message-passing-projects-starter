@@ -8,7 +8,7 @@ from geoalchemy2.functions import ST_AsText, ST_Point
 from sqlalchemy.sql import text
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect_api")
+logger = logging.getLogger("location_service")
 
 
 class LocationService:

@@ -5,9 +5,8 @@ from concurrent import futures
 import grpc
 import location_pb2
 import location_pb2_grpc
-from google.protobuf.timestamp_pb2 import Timestamp
 from datetime import datetime
-import udaconnect_api
+import location_service
 from random import randint
 import json
 
@@ -26,10 +25,11 @@ class LocationServicer(location_pb2_grpc.LocationServiceServicer):
         }
         logging.info("request_value=", request_value)
 
-        return location_pb2.LocationMessageRequest(**request_value)
+        location_service.LocationService.Create(request_value)
+        # return location_pb2.LocationMessageRequest(**request_value)
 
     def Retrieve(self, request, context):
-        result_from_db = udaconnect_api.LocationService.Retrieve(request.id)
+        result_from_db = location_service.LocationService.Retrieve(request.id)
 
         if result_from_db:
             return location_pb2.LocationMessageResponse(
