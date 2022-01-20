@@ -30,29 +30,29 @@ spec:
       labels:
         service: udaconnect-location-api
     spec:
-    containers:
-    - image: solondungu/nd064-udaconnect-location-api:latest
-      name: udaconnect-location-api
-      imagePullPolicy: Always
-      env:
-      - name: DB_USERNAME
-        valueFrom:
-          configMapKeyRef:
-            name: db-env
-            key: DB_PASSWORD
-      - name: DB_NAME
-        valueFrom:
-          configMapKeyRef:
-            name: db-env
-            key: DB_NAME
-      - name: DB_HOST
-        valueFrom:
-          configMapKeyRef:
-            name: db-env
-            key: DB_HOST
-      - name: DB_PORT
-        valueFrom:
-          configMapKeyRef:
-            name: db-env
-            key: DB_PORT
-    restartPolicy: Always
+      containers:
+      - image: solondungu/nd064-udaconnect-location-api:latest
+        name: udaconnect-location-api
+        imagePullPolicy: Always
+        env:
+        - name: DB_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_PASSWORD
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_NAME
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_HOST
+        - name: DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: db-env
+              key: DB_PORT
+      restartPolicy: Always
