@@ -31,7 +31,7 @@ spec:
         service: kafka-consumer
     spec:
       containers:
-      - image: solondungu/nd064-kafka-consumer:latest
+      - image: solondungu/kafka-consumer:latest
         name: kafka-consumer
         imagePullPolicy: Always
         env:
