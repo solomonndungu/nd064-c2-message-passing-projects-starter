@@ -13,7 +13,7 @@ spec:
   selector:
     service: udaconnect-connection-api
   type: NodePort
-
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
