@@ -8,7 +8,7 @@ RUN pip install --upgrade pip
 RUN pip3 install -r requirements.txt
 copy app/udaconnect/location.proto app/udaconnect/location.proto
 RUN python3 -m grpc_tools.protoc -I./app/udaconnect --python_out=./app/udaconnect --grpc_python_out=./app/udaconnect app/udaconnect/location.proto
-EXPOSE 5006
+EXPOSE 5008
 
 COPY . .
 ENTRYPOINT ["python3", "app/udaconnect/grpc_server.py"]

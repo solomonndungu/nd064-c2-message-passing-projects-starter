@@ -1,4 +1,4 @@
-def register_routes(api, app, root="location_api"):
-    from controllers import api as udaconnect_location_api
+def register_routes(api, app, root="api"):
+    from controllers import api as udaconnect_api
 
-    api.add_namespace(udaconnect_location_api, path=f"/{root}")
+    api.add_namespace(udaconnect_api, path=f"/{root}")
