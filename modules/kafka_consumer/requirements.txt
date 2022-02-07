@@ -4,8 +4,8 @@ click==8.0.2
 Flask==2.0.2
 GeoAlchemy2==0.10.0
 greenlet==1.1.2
-grpcio==1.40.0
-grpcio-tools==1.40.0
+grpcio
+grpcio-tools
 importlib-metadata==4.10.0
 importlib-resources==5.4.0
 itsdangerous==2.0.1

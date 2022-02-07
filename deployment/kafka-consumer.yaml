@@ -7,8 +7,8 @@ metadata:
 spec:
   ports:
   - name: "5006"
-    port: 5006
-    targetPort: 5006
+    port: 5003
+    targetPort: 5003
     nodePort: 30005
   selector:
     service: kafka-consumer
